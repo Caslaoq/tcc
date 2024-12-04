@@ -1,0 +1,612 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MENSAGENS */
+
+#msgC, #msgL{
+    position: absolute;
+}
+
+#mensagemCad{
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    position: absolute;
+    top: -7%;
+}
+
+#mensagemLog{
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+}
+
+/* CADASTRO */
+
+.tituloCad{
+    width: 100%;
+    margin: 3.2% 0 4% 0;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.tituloCad a{
+    font-size: 17px;
+    text-decoration: underline;
+    letter-spacing: 2.3px;
+    color: black;
+}
+
+#linkCad{
+    color: #009cff; 
+}
+
+#linkSelecionado{
+    font-size: 20.5px;
+    margin-top: -0.1%;
+}
+
+#linkCad, #linkLog, #linkSelecionado{
+    font-weight: bolder;
+}
+
+#linkCad, #linkLog{
+    font-size: 20px;
+}
+
+.divTudoForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 15%;
+}
+
+.divCampos{
+    width: 25%;
+    height: 95%;
+}
+
+.todosCampos{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15%;
+}
+
+.todosCampos h3{
+    letter-spacing: 2px;
+}
+
+input[type="text"], input[type="email"], #senhaLogin{
+    all: unset;
+    width: 95%;
+    height: 67px;
+    background-color: rgb(193, 193, 193);
+    border: 3.5px black solid;
+    padding: 0% 3% 0 5%;
+    margin-top: 3%;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.userInfos{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9%;
+    width: 30%;
+    height: 90vh;
+}
+
+.todoEscolhaAvatar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 43%;
+}
+
+.escolhaAvatar{
+    width: 61%;
+    height: 100%;
+    background-image: url(img/avatar1.jpeg);
+    background-size: cover;
+    background-position: center;
+    border: solid black 5px;
+}
+
+#fotoLabel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 11%;
+    height: 18%;
+    border-radius: 30px;
+    background-color: #000000;
+    position: absolute;
+    top: -8%;
+    left: 75%;
+    cursor: pointer;
+}
+
+#fotoInput{
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+}
+
+#fotoImg{
+    cursor: pointer;
+}
+
+.escolhaSexo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16%;
+    width: 100%;
+    height: 20%;
+}
+
+.todoRadio{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
+
+input[type="radio"]{
+    all: unset;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
+
+#fem{
+    left: 26.7%;
+}
+
+#fem:checked{
+    opacity: 1;
+    position: absolute;
+    bottom: 2%;
+    height: 100%;
+    z-index: -1;
+    transition: 1s ease;
+    background-color: #f672bd;
+    border-radius: 20px;
+}
+
+#naoDizer:checked{
+    opacity: 1;
+    position: absolute;
+    left: 46.4%;
+    bottom: 2%;
+    height: 100%;
+    background-color: #addcb0;
+    z-index: -1;
+    transition: 1s ease;
+    border-radius: 20px;
+}
+
+#imgMasc{
+    width: 38px;
+}
+
+#masc{
+    position: absolute;
+    right: 26.52%;
+    bottom: 2%;
+    
+}
+
+#masc:checked{
+    opacity: 1;
+    position: absolute;
+    right: 26.52%;
+    bottom: 2%;
+    height: 100%;
+    z-index: -1;
+    transition: 1s ease;
+    background-color: #009CFF;
+    border-radius: 20px;
+}
+
+.botaoCadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+#botaoCad{
+    all: unset;
+    text-align: center;
+    font-family: tudo;
+    width: 48%;
+    height: 120%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    font-size: 23px;
+    z-index: 999;
+}
+
+.camposInfo{
+    width: 109%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.campoTelS{
+    all: unset;
+    width: 84%;
+    height: 50px;
+    background-color: rgb(193, 193, 193);
+    border: 3.5px black solid;  
+    border-radius: 15px;
+    padding: 0% 3%;
+    margin-top: 3%;
+}
+
+/* LOGIN */
+
+#corpoLogin{
+    background: linear-gradient(to right, black, #009CFF);
+}
+
+#linkLog{
+    color: #ff0000;
+}
+
+#todoLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    text-align: center;
+}   
+
+#formLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#camposLogin{
+    width: 100%;
+}
+
+#camposLogin input{
+    all: unset;
+    width: 99%;
+    height: 67px;
+    background-color: rgb(217, 238, 255);
+    border: 3.5px black solid;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+#camposLogin h3{
+    text-align: center;
+}
+
+#botaoLog{
+    all: unset;
+    text-align: center;
+    font-family: tudo;
+    width: 53%;
+    height: 13%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    font-size: 23px;
+    letter-spacing: 3px;
+    border-radius: 40px;
+}
+
+/* PÁGINA USUÁRIO */
+
+.topoAjuste{
+    width: 100%;
+    height: 40px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+}
+
+.topoAjuste img{
+    width: 35px;
+}
+
+#logout{
+    color: black;
+}
+
+.tudoUsuario{
+    width: 100%;
+    height: 105vh;
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.ladoEUsuario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 50%;
+    height: 80%;
+}
+
+.areaConquistas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7%;
+    padding: 0 1%;
+    overflow-x: hidden;
+    width: 82%;
+    height: 47%;
+    background-color: rgb(203, 202, 202);
+    border: 5px solid black;
+}
+
+.conquistas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6%;
+    width: 36%;
+    height: 100%;
+}
+
+.conquistas img{
+    width: 90px;
+}
+
+.tituloConquista{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.descConquistas{
+    text-align: center;
+    width: 100%;
+}
+
+.todoDiario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82%;
+    height: 15%;
+}
+
+.todaBarraDiaria{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 1.7%;
+    gap: 3%;
+}
+
+.barraDiaria{
+    width: 90%;
+    height: 30px;
+    padding: 0.8%;
+    background-color: #000000;
+}
+
+.carregamento{
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to right, red, purple, blue);
+}
+
+.ladoDUsuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 120vh;
+    border-left: solid black 5px;
+}
+
+.divLadoD{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    gap: 5%;
+}
+
+.usuarioTodo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 90%;
+    height: 60%;
+    margin-top: 2%;
+}
+
+.fotoUsuario{
+    width: 52%;
+    height: 90%;
+    border-radius: 270px;
+    border: black 4px solid;
+    background-color: white;
+    overflow: hidden;
+}
+
+.fotoUsuario img{
+    width: 100%;
+    height: 100%;
+}
+
+.todoNivel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 17%;
+    width: 100%;
+    height: 20%;
+}
+
+.barraNivel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 30%;
+    background-color: black;
+    /* border-radius: 10px; */
+    padding: 0.5%;
+}
+
+.barraNivel h3{
+    letter-spacing: 1.2px;
+    color: white;
+}
+
+@media (min-width: 1920px) {
+    /* MENSAGENS */
+
+    #mensagemCad{
+        font-size: 18px;
+        letter-spacing: 0.3px;
+        position: absolute;
+        top: -7%;
+    }
+
+    #mensagemLog{
+        bottom: 31%;
+    }
+
+    .ladoDUsuario{
+        height: 90%;
+        border-left: solid black 7px;
+    }
+
+    .usuarioTodo{
+        height: 52%;
+    }
+
+    .fotoUsuario{
+        width: 18.9vw;
+        height: 76%;
+    }
+
+    .conquistas img{
+        width: 110px;
+    }
+    
+    .divTudoForm{
+        gap: 8% !important;
+    }
+
+    #corpoUsuario{
+        font-size: 20px;
+    }
+
+    .topoAjuste{
+        font-size: 21px;
+        margin-bottom: 2%;
+    }
+    
+    .topoAjuste img{
+        width: 40px;
+    }
+
+    .todosCampos input{
+        width: 80% !important;
+        height: 6.7vh !important;
+    }
+
+    .camposInfo{
+        width: 90%;
+        /* justify-content: center !important; */
+    }
+
+    .camposInfo input{
+        width: 84.2% !important;
+    }
+
+    .todosCampos h3{
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+
+    .campoTelS{
+        padding: 0% 5%;
+    }
+
+    .userInfos{
+        height: 65vh;
+    }
+
+    #fotoLabel{
+        width: 10%;
+        height: 19%;
+        top: -8%;
+        left: 71%;
+    }
+
+    .escolhaAvatar{
+        width: 52%;
+    }
+
+    #fem{
+        left: 30.65% !important;
+    }
+
+    #naoDizer:checked{
+        left: 47.5% !important;
+    }
+
+    #masc{
+        right: 30.5% !important;
+    }
+    
+    #camposLogin{
+        width: 95%;
+    }
+
+    #camposLogin input{
+        height: 8vh !important;
+        width: 100% !important;
+    }
+
+    #camposLogin h3{
+        margin-bottom: 3%;
+    }
+
+}
